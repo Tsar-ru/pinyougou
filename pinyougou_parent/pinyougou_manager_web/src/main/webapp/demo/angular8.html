@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>循环</title>
+    <script  type="text/javascript" src="../plugins/angularjs/angular.min.js"></script>
+    <script type="text/javascript">
+      var myapp = angular.module("myapp",[]);
+      myapp.controller("myController",function($scope){
+          $scope.list = ['aaa','bbb','ccc'];
+      })
+
+    </script>
+</head>
+<body ng-app="myapp" ng-controller="myController" >
+    <div ng-repeat="p in list">
+       {{p}}
+    </div>
+</body>
+</html>

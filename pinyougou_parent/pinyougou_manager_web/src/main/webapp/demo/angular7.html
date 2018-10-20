@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件指令</title>
+    <script  type="text/javascript" src="../plugins/angularjs/angular.min.js"></script>
+    <script type="text/javascript">
+      var myapp = angular.module("myapp",[]);
+      myapp.controller("myController",function($scope){
+         $scope.add=function(){
+             // JS方法 parseInt
+          $scope.c =parseInt($scope.a)  + parseInt($scope.b);
+         }
+      })
+
+    </script>
+</head>
+<body ng-app="myapp" ng-controller="myController" >
+  <input ng-model="a">+<input ng-model="b"><button ng-click="add()">等于</button><input ng-model="c">
+</body>
+</html>

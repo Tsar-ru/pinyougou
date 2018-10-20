@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>初始化指令</title>
+    <script  type="text/javascript" src="../plugins/angularjs/angular.min.js"></script>
+    <script type="text/javascript">
+      var myapp = angular.module("myapp",[]);
+      myapp.controller("myController",function($scope){
+
+          $scope.findUser=function(){
+              $scope.user={username:'bbbbb',age:20};
+          }
+
+      })
+
+    </script>
+</head>
+<body ng-app="myapp" ng-controller="myController" ng-init="findUser()">
+  {{user.username}}
+</body>
+</html>

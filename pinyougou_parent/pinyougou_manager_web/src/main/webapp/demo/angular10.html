@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>循环对象</title>
+    <script  type="text/javascript" src="../plugins/angularjs/angular.min.js"></script>
+    <script type="text/javascript">
+      var myapp = angular.module("myapp",[]);
+      myapp.controller("myController",function($scope,$http){
+
+
+
+          $scope.findAll=function () {
+              $http.get("../brand/findAll").success(function(response){
+                  // response就是查询出的所有数据
+                  $scope.list = response;
+              })
+          }
+      })
+
+    </script>
+</head>
+<body ng-app="myapp" ng-controller="myController" ng-init="findAll()">
+    <div ng-repeat="p in list">
+       {{p.name}}  {{p.firstChar}}
+    </div>
+</body>
+</html>

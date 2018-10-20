@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>控制器</title>
+    <script  type="text/javascript" src="../plugins/angularjs/angular.min.js"></script>
+    <script type="text/javascript">
+        myController=function($scope){
+            // $scope是用于html和JS数据交互的入口
+            $scope.username="syl";
+        }
+    </script>
+</head>
+<body ng-app  ng-controller="myController">
+  {{username}}
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MVC模式</title>
+    <script  type="text/javascript" src="../plugins/angularjs/angular.min.js"></script>
+    <script type="text/javascript">
+      /*  M model  数据模型
+        V view   视图 显示数据的位置
+        C controller 控制器*/
+
+        myController=function($scope){    //C controller 控制器
+            // $scope是用于html和JS数据交互的入口
+            $scope.username="syl";  //M model
+        }
+    </script>
+</head>
+<body ng-app  ng-controller="myController">
+  {{username}}
+ <!-- V view-->
+
+</body>
+</html>

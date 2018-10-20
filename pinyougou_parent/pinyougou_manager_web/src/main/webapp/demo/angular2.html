@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>双向绑定</title>
+    <script  type="text/javascript" src="../plugins/angularjs/angular.min.js"></script>
+    <script type="text/javascript">
+        function show(){
+       /*   获取输入框的内容
+            显示到span中*/
+           var content = document.getElementById("myInput").value;
+            document.getElementById("mySpan").innerHTML=content;
+
+            // 如果用JQ
+            // $("#mySpan").html($("#myInput").val());
+        }
+    </script>
+</head>
+<body ng-app>
+   <input id="myInput" onkeyup="show()">  <br/>
+ 您输入的是：<span id="mySpan"></span>
+   <br/> <br/>
+
+
+
+  <input ng-model="aaa">   <br/>
+   您输入的是:{{aaa}}
+
+</body>
+</html>
